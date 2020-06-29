@@ -6,6 +6,9 @@ augroup guardado
     autocmd CursorHold,CursorHoldI * silent! wall
 augroup END
 
+"Para que cheque el contenido del texto escrito. Es raro que esto sea necesario.
+syntax spell toplevel
+
 "Path
 set path+=paper/**
 set path+=actual/**
@@ -23,9 +26,23 @@ setlocal omnifunc=syntaxcomplete#Complete
 onoremap i$ :<C-u>normal! T$vt$<CR>
 onoremap a$ :<C-u>normal! F$vf$<CR>
 
+"j y k se invierten con gj y gk solo para latex (no se lleva bien con relativenumber)
+nnoremap <buffer> j gj
+nnoremap <buffer> gj j
+nnoremap <buffer> k gk
+nnoremap <buffer> gk k
+
 "Compile para compilar en latexmk AGUAS: solo en neovim?.
 "Como lo tengo configurado compila en pdflatex.
 command! Compile 11 split | terminal latexmk %
+
+"Para control de cambios estilo JAC. Incluye macros para agregar etiquetas de cambio
+"Como a el le gustan.
+command! Control filetype indent off |
+            setlocal noautoindent nocindent nosmartindent |
+            \ setlocal indentexpr=  |
+            \ let @r='`>a}`<i\cutnk{' |
+            \ let @a='`>a \kn <esc>`<i \kn ' |
 
 "Abreviaturas
 iab \1 1{\hskip -2.5 pt}\hbox{I}
@@ -41,7 +58,3 @@ iab ltable \begin{table}<CR>\begin{tabular}{cc}<CR>\hline<CR>&\\ <CR>\hline<CR>\
 iab larray \begin{array}{}<CR>\end{array}<esc>k$T{i
 iab lcase \begin{case}<CR>\end{case}<esc>kA
 iab lcenter \begin{center}<CR>\end{center}<esc>O
-
-
-"Para que cheque el contenido del texto escrito. Es raro que esto sea necesario.
-syntax spell toplevel
