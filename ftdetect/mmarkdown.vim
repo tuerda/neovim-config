@@ -1,1 +1,1 @@
-autocmd BufRead,BufNewFile *.mmd    setlocal filetype=mmarkdown
+autocmd BufRead,BufNewFile **/notas/**.md    setlocal filetype=mmarkdown
