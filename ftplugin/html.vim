@@ -1,12 +1,7 @@
 "Ortografía y guardar cada 2 segundos si no hago nada
 setlocal iskeyword+=45
 setlocal omnifunc=htmlcomplete#Complete
-set updatetime=2000
 set spell
-augroup guardado
-    autocmd!
-    autocmd CursorHold,CursorHoldI * silent! wall
-augroup END
 
 "path
 set path+=estilos/**
