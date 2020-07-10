@@ -188,6 +188,12 @@ xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 
 "}}}
 
+"Comandos --------- {{{
+
+"Para dividir una oración por linea
+command! -range Oraciones <line1>,<line2> s/\. /\./g
+"}}}
+
 "Para plugins --------- {{{
 "Los plugins se cargan solos de pack/plugins/start
 "Para agregar plugins opcionales de pack/plugins/opt, usar packadd
