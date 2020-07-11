@@ -200,8 +200,8 @@ command! -range Oraciones <line1>,<line2> s/\. /\./g
 
 "Ahora cargo surround, commentary, y los textobjs: user, between
 
-"Para archivos cifrados con gpg. Versión modificada de algo copiado del internet.
-"Debo ver cómo pasar esto a un tipo de archivo. --------- {{{
+"Para archivos cifrados con gpg. Versión modificada de algo copiado del internet. --------- {{{
+"Debo ver cómo pasar esto a un tipo de archivo.
 
 " Don't save backups of *.gpg files
 set backupskip+=*.gpg
