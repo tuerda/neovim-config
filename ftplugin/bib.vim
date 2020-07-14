@@ -1,3 +1,5 @@
+colorscheme nicoopaco
+
 match Todo /page[=\ ]\|url[=\ ]\|\;/
 
 setlocal omnifunc=syntaxcomplete#Complete

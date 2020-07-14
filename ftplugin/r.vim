@@ -1,4 +1,4 @@
-colorscheme nicoopaco
+colorscheme nicoclaro
 setlocal omnifunc=syntaxcomplete#Complete
 "Para abrir y cerrar corchetes donde los queremos
 inoremap {<CR> {<CR>  <CR>}<up><right>

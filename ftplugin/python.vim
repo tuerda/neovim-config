@@ -4,7 +4,7 @@ setlocal omnifunc=python3complete#Complete
 set keywordprg=pydoc
 
 "aguas: Solo en neovim
-command! Run :vsplit | terminal python
+command! Run :vsplit | terminal python3
 
 "path
 setlocal path+=codigo/**
