@@ -163,6 +163,10 @@ tnoremap <c-v><esc> <esc>
 "modo normal
 tnoremap <c-w> <c-\><c-n><c-w>
 
+"Seguridad, para pegar desde onternet.
+inoremap  <C-r>+  <C-r><C-r>+                  │
+inoremap  <C-r>*  <C-r><C-r>* 
+
 "Movimientos largos más intuitivos
 nnoremap <leader>h ^
 onoremap <leader>h ^
@@ -191,7 +195,7 @@ xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 "Comandos --------- {{{
 
 "Para dividir una oración por linea
-command! -range Oraciones <line1>,<line2> s/\. /\./g
+command! -range Oraciones <line1>,<line2> s/\. /\./g | nohl
 "}}}
 
 "Para plugins --------- {{{
