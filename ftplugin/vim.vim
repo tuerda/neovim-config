@@ -5,8 +5,6 @@ setlocal foldlevel=0
 "}}}
 setlocal keywordprg=:help
 
-setlocal omnifunc=syntaxcomplete#Complete
-
 " Para que gf siga archivos, y para tener todo el vimruntime en la búsqueda
 set path+=$HOME/.config/nvim/**
 

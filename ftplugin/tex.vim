@@ -1,15 +1,16 @@
-"Ortografía y guardar cada 2 segundos si no hago nada
+"Ortografía y guardar cada 2 segundos si no hago nada --------- {{{
 set updatetime=2000
 set spell
 augroup guardado
     autocmd!
     autocmd CursorHold,CursorHoldI * silent! wall
 augroup END
+"}}}
 
 "Para que cheque el contenido del texto escrito. Es raro que esto sea necesario.
 syntax spell toplevel
 
-"Path
+"Path --------- {{{
 set path+=paper/**
 set path+=actual/**
 set path+=*/paper/**
@@ -20,31 +21,34 @@ set path+=../presentacion/**
 set path+=../paper/**
 
 setlocal suffixesadd+=.bib
-setlocal omnifunc=syntaxcomplete#Complete
+"}}}
 
-"i$ y a$ para fórmulas (Imperfectas: No funcionan si estás sobre el símbolo de peso)
+"i$ y a$ para fórmulas (Imperfectas: No funcionan si estás sobre el símbolo de peso) --------- {{{
 onoremap i$ :<C-u>normal! T$vt$<CR>
 onoremap a$ :<C-u>normal! F$vf$<CR>
+"}}}
 
-"j y k se invierten con gj y gk solo para latex (no se lleva bien con relativenumber)
+"j y k se invierten con gj y gk solo para latex (no se lleva bien con relativenumber) --------- {{{
 nnoremap <buffer> j gj
 nnoremap <buffer> gj j
 nnoremap <buffer> k gk
 nnoremap <buffer> gk k
+"}}}
 
 "Compile para compilar en latexmk AGUAS: solo en neovim?.
 "Como lo tengo configurado compila en pdflatex.
 command! Compile 11 split | terminal latexmk %
 
-"Para control de cambios estilo JAC. Incluye macros para agregar etiquetas de cambio
+"Para control de cambios estilo JAC. Incluye macros para agregar etiquetas de cambio --------- {{{
 "Como a el le gustan.
 command! Control filetype indent off |
             setlocal noautoindent nocindent nosmartindent |
             \ setlocal indentexpr=  |
             \ let @r='`>a}`<i\cutnk{' |
             \ let @a='`>a \kn <esc>`<i \kn ' |
+"}}}
 
-"Abreviaturas
+"Abreviaturas --------- {{{
 iab \1 1{\hskip -2.5 pt}\hbox{I}
 iab lenumerate \begin{enumerate}<CR>\item{}<CR>\end{enumerate}<esc>k0f{a
 iab litemize \begin{itemize}<CR>\item{}<CR>\end{itemize}<esc>k0f{a
@@ -58,3 +62,4 @@ iab ltable \begin{table}<CR>\begin{tabular}{cc}<CR>\hline<CR>&\\ <CR>\hline<CR>\
 iab larray \begin{array}{}<CR>\end{array}<esc>k$T{i
 iab lcase \begin{case}<CR>\end{case}<esc>kA
 iab lcenter \begin{center}<CR>\end{center}<esc>O
+"}}}

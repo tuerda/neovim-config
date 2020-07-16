@@ -1,6 +1,5 @@
 "Ortografía y guardar cada 2 segundos si no hago nada
 setlocal iskeyword+=45
-setlocal omnifunc=htmlcomplete#Complete
 set spell
 
 "path

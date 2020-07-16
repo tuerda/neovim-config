@@ -1,6 +1,5 @@
 let g:python_recommended_style=0
 " autocompletado modo omni para python
-setlocal omnifunc=python3complete#Complete
 set keywordprg=pydoc
 
 "aguas: Solo en neovim

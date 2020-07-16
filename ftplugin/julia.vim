@@ -1,8 +1,6 @@
 setlocal comments=:#
 setlocal commentstring=#%s
 
-setlocal omnifunc=syntaxcomplete#Complete
-
 setlocal path+=codigo/**
 setlocal path+=obsoleto/**
 setlocal path+=..

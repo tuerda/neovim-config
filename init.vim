@@ -24,6 +24,7 @@ set wildmode=longest,full
 
 "Autocompletado --------- {{{
 set completeopt=longest,menuone "Completa de manera más intuitiva
+setlocal omnifunc=syntaxcomplete#Complete
 "set complete-=i "Hace que no busque entre todos los archivos incluídos Esto puede ahorrar recursos a veces
 ""}}}
 
