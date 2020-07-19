@@ -185,7 +185,7 @@ nnoremap <leader>b :ls<CR>:b<Space>
 nnoremap <leader>D :colorscheme concentracion <cr>
 
 "Tab para autocompletar. Esta función está en plugin/tabcomplete.vim
-inoremap <Tab> <C-R>=Tabcomplete()<CR>
+inoremap <expr> <Tab> Tabcomplete()
 
 "En modo visual * y # buscan la selección actual en lugar de la palabra actual. Esta función está en plugin/vsetsearch.vim 
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>

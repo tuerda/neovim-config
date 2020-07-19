@@ -1,1 +1,1 @@
-command Format % s /,/§,/g | % !column -s § -t
+command! Format % s /,/§,/g | % !column -s § -t
