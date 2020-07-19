@@ -12,8 +12,7 @@ setlocal path+=../codigo/**
 setlocal path+=../../codigo/**
 setlocal path+=obsoleto/**
 
-nnoremap <buffer> <leader>R yyj<c-w>lpa<cr>
-xnoremap <buffer> <leader>R y<c-w>lpa<cr>
-inoremap <cr> <space><bs><cr>
+nnoremap <buffer> <leader>R :Aconsola<cr><c-w>li<cr>
+xnoremap <buffer> <leader>R :Aconsola<cr><c-w>li<cr>
 
 iab pyinit def __init__ (self):<cr>

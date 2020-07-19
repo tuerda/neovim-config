@@ -197,6 +197,13 @@ xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 
 "Para dividir una oración por linea
 command! -range Oraciones <line1>,<line2> s/\. /\./g | nohl
+
+"Para enviar cosas a un REPL
+"Por default la consolaactiva es la 1
+let consolaactiva=1
+command! -range Aconsola call jobsend(consolaactiva,getline(<line1>,<line2>))
+"Para que diga los nombres de las consolas
+command! DIME bufdo echo b:terminal_job_id
 "}}}
 
 "Para plugins --------- {{{
