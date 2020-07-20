@@ -17,5 +17,4 @@ This is a config for a heavily customized neovim setup. It includes:
 - A custom script for changing keyboard maps depending on the mode
 - Four plugins found in `pack/plugins/start` (which I just included in the repo because they are small)
 - Four custom color schemes (and a minor variation on one of them)
-- The 4 plugins that I use (all of them are very small)
 - Miscelaneous keybindings, settings and configuration
