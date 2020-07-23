@@ -5,5 +5,8 @@ inoremap {<CR> {<CR>  <CR>}<up><right>
 
 "aguas: Esto solo sirve con neovim y no con vim
 command! Run :vsplit | terminal R
-nnoremap <buffer> <leader>R :Aconsola<cr><c-w>li<cr>
-xnoremap <buffer> <leader>R :Aconsola<cr><c-w>li<cr>
+nnoremap <silent> <leader>r :set opfunc=aconsola#Mandaraladerecha<cr>g@
+xnoremap <silent> <leader>r :<C-U>call aconsola#Mandaraladerecha("0")<CR>
+nmap <silent> <leader>rr V<leader>r
+
+" xnoremap <buffer> <leader>R :w! temporal.R<cr><c-w>lisource("temporal.R",echo=TRUE) <cr>

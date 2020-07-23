@@ -13,8 +13,9 @@ command! Run :vsplit | terminal julia
 "Indentación
 setlocal foldmethod=syntax
 
-nnoremap <buffer> <leader>R :Aconsola<cr><c-w>li<cr>
-xnoremap <buffer> <leader>R :Aconsola<cr><c-w>li<cr>
+nnoremap <silent> <leader>r :set opfunc=aconsola#Mandaraladerecha<cr>g@
+xnoremap <silent> <leader>r :<C-U>call aconsola#Mandaraladerecha("0")<CR>
+nmap <silent> <leader>rr V<leader>r
 
 "convertir 'and', 'or' y 'not' A sus equivalentes julianos
 iab and &

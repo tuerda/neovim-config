@@ -198,12 +198,6 @@ xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 "Para dividir una oración por linea
 command! -range Oraciones <line1>,<line2> s/\. /\./g | nohl
 
-"Para enviar cosas a un REPL
-" let consolaactiva=1
-command! -range Aconsola <line1>,<line2>yank | wincmd l | put
-"Para que diga los nombres de las consolas
-" command! DIME bufdo echo b:terminal_job_id
-"}}}
 
 "Para plugins --------- {{{
 "Los plugins se cargan solos de pack/plugins/start

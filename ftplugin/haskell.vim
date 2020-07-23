@@ -1,8 +1,10 @@
 command! Run :vsplit | terminal ghci
-nnoremap <leader>R :w<cr><c-w>li:l <c-\><c-n>:put #<cr>a
-"Para todas las excentricidades de indentación
+" vnoremap <leader>R :w<cr><c-w>li:l <c-\><c-n>:put #<cr>a
+xnoremap <buffer> <leader>R :w! temporal.hs<cr><c-w>li:l temporal.hs<cr>
+
+
+"Para todas las excentricidades de indentación --------- {{{
 setlocal virtualedit=all
-    
 
 "Para alinear y tabular
 function! Tabalignorcomplete()
@@ -22,3 +24,4 @@ endfunction
 
 iunmap <tab>
 inoremap <expr> <tab> Tabalignorcomplete()
+"}}}
