@@ -10,6 +10,9 @@ augroup END
 "Para que cheque el contenido del texto escrito. Es raro que esto sea necesario.
 syntax spell toplevel
 
+" Doblar manualmente con zf<movimiento>
+set foldmethod=manual
+
 "Path --------- {{{
 set path+=paper/**
 set path+=actual/**
