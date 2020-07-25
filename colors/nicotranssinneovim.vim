@@ -12,7 +12,7 @@ highlight CursorLineNr   ctermfg=16      ctermbg=245                  guifg=#000
 highlight Delimiter      ctermfg=125                                  guifg=#af005f
 highlight Directory      ctermfg=28                                   guifg=#008700
 highlight Error          ctermbg=196                                  guifg=#ff0000
-highlight Folded         ctermfg=19      ctermbg=245                  guifg=#0000af     guibg=#8a8a8a
+highlight Folded         ctermfg=18      ctermbg=242                  guifg=#000087     guibg=#8a8a8a
 highlight Identifier     ctermfg=27                                   guifg=#005fff
 highlight LineNr         ctermfg=254     ctermbg=236                  guifg=#e4e4e4     guibg=#303030
 highlight MatchParen     ctermfg=16      ctermbg=31                   guifg=#000000     guibg=#0087af

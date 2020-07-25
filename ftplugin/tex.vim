@@ -52,7 +52,6 @@ command! Control filetype indent off |
 "}}}
 
 "Abreviaturas --------- {{{
-iab \1 1{\hskip -2.5 pt}\hbox{I}
 iab lenumerate \begin{enumerate}<CR>\item{}<CR>\end{enumerate}<esc>k0f{a
 iab litemize \begin{itemize}<CR>\item{}<CR>\end{itemize}<esc>k0f{a
 iab lfigure \begin{figure}<CR>\begin{centering}<CR>\includegraphics{}<CR>\caption{}<CR>\label{}<CR>\end{centering}<CR>\end{figure}<esc>4k0f{a

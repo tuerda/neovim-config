@@ -109,20 +109,18 @@ cnoremap w!! w !sudo tee % > /dev/null
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-" Mover un bloque visual 
+" Mover un bloque visual  --------- {{{
 xnoremap <m-down> :m '>+1<CR>gv=gv
 xnoremap <m-up> :m '<-2<CR>gv=gv
 xnoremap <m-right> <Esc>`<<C-v>`>odp`<<C-v>`>lol
 xnoremap <m-left> <Esc>`<<C-v>`>odhP`<<C-v>`>hoh
+"}}}
 
 "dmenu para algunos snippets y macros.
 nnoremap <leader>m :r !cat ~/.vimsnips/`ls ~/.vimsnips <bar> dmenu`<CR>0"pd$@p
 
 "alt espacio para dar un espacio sin expandir una abreviación abreviación.
 inoremap <m-space> <c-v><space>
-
-" Espacio r para copiar al portapapeles del sistema
-" xnoremap <leader>r :w !xsel -bi<CR><CR>
 
 "control L para borrar búsquedas marcadas
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
@@ -140,10 +138,13 @@ nnoremap <leader>t :!ctags -R<CR><CR>
 nnoremap <leader>ev :tabedit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-"espacio u para poner en mayúscula todas las primeras letras de palabras en una linea o selección visual:
+"espacio u para poner en mayúscula todas las primeras letras de palabras en una linea o selección visual: --------- {{{
+"Tal vez esto se pueda convertir en un operador para mayor flexibilidad, pero habría que pensar como operar sobre lineas incompletas.
 xnoremap <leader>u :s/\%V\<./\u&/g<CR>:nohlsearch<CR>
 nnoremap <leader>u :s/\<./\u&/g<CR>:nohlsearch<CR>
+"}}}
 
+"Objetos --------- {{{
 "para operar sobre la última inserción "an insertion"
 xnoremap ai `]o`[
 onoremap ai :<C-U>normal! `[v`]<CR>
@@ -154,7 +155,9 @@ onoremap ie :<C-U>normal! GVgg<CR>
 
 "para operar sobre una línea (sin el salto de línea) "in line"
 onoremap il :<C-u>normal! 0v$<CR>
+"}}}
 
+"Terminal --------- {{{
 "Solo si es neovim; vim no entiende esto: Para salir de modo insertar en el emulador de terminal
 tnoremap <esc> <c-\><c-n>
 "Y para enviarle un <esc> al programa de terminal
@@ -163,12 +166,13 @@ tnoremap <c-v><esc> <esc>
 "Solo en neovim. Control W sale de modo terminal y hace lo que haría si fuera
 "modo normal
 tnoremap <c-w> <c-\><c-n><c-w>
+"}}}
 
 "Seguridad, para pegar desde onternet.
-inoremap  <C-r>+  <C-r><C-r>+                  │
+inoremap  <C-r>+  <C-r><C-r>+
 inoremap  <C-r>*  <C-r><C-r>* 
 
-"Movimientos largos más intuitivos
+"Movimientos largos más intuitivos --------- {{{
 nnoremap <leader>h ^
 onoremap <leader>h ^
 nnoremap <leader>l $
@@ -177,6 +181,7 @@ nnoremap <leader>k <c-u>
 onoremap <leader>k <c-u>
 nnoremap <leader>j <c-d>
 onoremap <leader>j <c-d>
+"}}}
 
 "Para saltar rápido entre buffers. Mapping robado de internet y modificado un poco.
 nnoremap <leader>b :ls<CR>:b<Space>
@@ -194,10 +199,9 @@ xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 "}}}
 
 "Comandos --------- {{{
-
 "Para dividir una oración por linea
 command! -range Oraciones <line1>,<line2> s/\. /\./g | nohl
-
+"}}}
 
 "Para plugins --------- {{{
 "Los plugins se cargan solos de pack/plugins/start
@@ -205,7 +209,7 @@ command! -range Oraciones <line1>,<line2> s/\. /\./g | nohl
 
 "Ahora cargo surround, commentary, y los textobjs: user, between
 
-"Para archivos cifrados con gpg. Versión modificada de algo copiado del internet. --------- {{{
+"Para archivos cifrados con gpg. Ligeramente modificado de algo copiado del internet. --------- {{{
 "Debo ver cómo pasar esto a un tipo de archivo.
 
 " Don't save backups of *.gpg files
