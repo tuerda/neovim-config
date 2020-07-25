@@ -1,27 +1,6 @@
 command! Run :vsplit | terminal ghci
-" vnoremap <leader>R :w<cr><c-w>li:l <c-\><c-n>:put #<cr>a
-xnoremap <buffer> <leader>R :w! temporal.hs<cr><c-w>li:l temporal.hs<cr>
 
-
-"Para todas las excentricidades de indentación --------- {{{
-setlocal virtualedit=all
-
-"Para alinear y tabular
-function! Tabalignorcomplete()
-    let linea=strpart(getline('.'),-1,col('.')) "linea actual hasta el cursor
-    let palabra=matchstr(linea,"[^ \s]*$") "palabra actual
-    if (col('.')==1)
-        return "\<tab>"
-    elseif (strlen(palabra)==0)
-        return "\<esc>klwji"
-    elseif (match(palabra,'\/') != -1) "habrá alguna / por ahí?
-        return "\<C-X>\<C-F>"
-    else
-        return "\<C-P>"
-    endif
-endfunction
-
-
-iunmap <tab>
-inoremap <expr> <tab> Tabalignorcomplete()
-"}}}
+"mandar selección visual a la consola
+xnoremap <buffer> <leader>r :w! temporal.hs<cr><c-w>li:l temporal.hs<cr>
+"mandar todo a la consola
+nnoremap <buffer> <leader>r :w! temporal.hs<cr><c-w>li:l temporal.hs<cr>
