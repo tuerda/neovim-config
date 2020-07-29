@@ -29,6 +29,8 @@ setlocal suffixesadd+=.bib
 "i$ y a$ para fórmulas (Imperfectas: No funcionan si estás sobre el símbolo de peso) --------- {{{
 onoremap i$ :<C-u>normal! T$vt$<CR>
 onoremap a$ :<C-u>normal! F$vf$<CR>
+xnoremap i$ :<C-u>normal! T$vt$<CR>
+xnoremap a$ :<C-u>normal! F$vf$<CR>
 "}}}
 
 "j y k se invierten con gj y gk solo para latex (no se lleva bien con relativenumber) --------- {{{
