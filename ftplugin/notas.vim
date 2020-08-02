@@ -3,5 +3,5 @@ set nospell
 setlocal suffixesadd+=.md
 
 "Para búsquedas. Esto está robado del canal de youtube "nixcasts"
-command! -nargs=1 Ngrep vimgrep "<args>" $HOME/docs/notas/**/*.md
+command! -nargs=1 Ngrep vimgrep "<args>" $HOME/docs/notas/**/*.md |copen
 nnoremap <buffer> <leader>/ :Ngrep<space>
