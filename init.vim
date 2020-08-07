@@ -35,13 +35,23 @@ set cursorline
 set showcmd
 set number
 set relativenumber
-"números absolutos en ventanas que no están activas:
+" }}}
+
+"números absolutos en ventanas que no están activas: --------- {{{
 augroup linenr
     autocmd!
     autocmd WinEnter * setlocal relativenumber
     autocmd WinLeave * setlocal norelativenumber
 augroup END
-" }}}
+"}}}
+
+"Abrir el quickfix automáticamente --------- {{{
+augroup quickfix
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* nested cwindow
+    autocmd QuickFixCmdPost l* nested lwindow
+augroup END
+"}}}
 
 "Línea de estado --------- {{{
 set laststatus=2
