@@ -11,6 +11,7 @@ set backspace=indent,eol,start "que el backspace jale
 set hidden
 set noautoread
 set confirm
+set autochdir
 
 "Hacer que vim trate todos los números como decimales, tengan o no un cero en frente
 set nrformats-=octal
