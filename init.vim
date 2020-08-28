@@ -149,6 +149,10 @@ nnoremap <leader>t :!ctags -R<CR><CR>
 nnoremap <leader>ev :tabedit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+"para copiar al portapapeles de sistema (independientemente del teclado)
+nnoremap <leader>y "+y
+xnoremap <leader>y "+y
+
 "espacio u para poner en mayúscula todas las primeras letras de palabras en una linea o selección visual: --------- {{{
 "Tal vez esto se pueda convertir en un operador para mayor flexibilidad, pero habría que pensar como operar sobre lineas incompletas.
 xnoremap <leader>u :s/\%V\<./\u&/g<CR>:nohlsearch<CR>
