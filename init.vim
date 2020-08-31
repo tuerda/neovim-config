@@ -155,8 +155,8 @@ xnoremap <leader>y "+y
 
 "espacio u para poner en mayúscula todas las primeras letras de palabras en una linea o selección visual: --------- {{{
 "Tal vez esto se pueda convertir en un operador para mayor flexibilidad, pero habría que pensar como operar sobre lineas incompletas.
-xnoremap <leader>u :s/\%V\<./\u&/g<CR>:nohlsearch<CR>
-nnoremap <leader>u :s/\<./\u&/g<CR>:nohlsearch<CR>
+xnoremap <leader>u :<c-u>keeppatterns s/\%V\<./\u&/g<CR>
+nnoremap <leader>u :keeppatterns s/\<./\u&/g<CR>
 "}}}
 
 "Objetos --------- {{{
@@ -215,7 +215,7 @@ xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 
 "Comandos --------- {{{
 "Para dividir una oración por linea
-command! -range Oraciones <line1>,<line2> s/\. /\./g | nohl
+command! -range Oraciones keeppatterns <line1>,<line2> s/\. /\./g
 "}}}
 
 "Para plugins --------- {{{
