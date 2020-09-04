@@ -1,3 +1,6 @@
+set breakindent
+set foldmethod=manual "Doblar manualmente con zf<movimiento>
+
 "Ortografía y guardar cada 2 segundos si no hago nada --------- {{{
 set updatetime=2000
 set spell
@@ -10,8 +13,6 @@ augroup END
 "Para que cheque el contenido del texto escrito. Es raro que esto sea necesario.
 syntax spell toplevel
 
-" Doblar manualmente con zf<movimiento>
-set foldmethod=manual
 
 "Path --------- {{{
 set path+=paper/**
@@ -38,6 +39,7 @@ nnoremap <buffer> j gj
 nnoremap <buffer> gj j
 nnoremap <buffer> k gk
 nnoremap <buffer> gk k
+
 "}}}
 
 "Compile para compilar en latexmk AGUAS: solo en neovim?.

@@ -83,6 +83,7 @@ colorscheme nicotranssinneovim
 set scrolloff=3
 set display+=lastline
 set linebreak
+set wrap
 set splitbelow
 set splitright
 "}}}
