@@ -10,3 +10,9 @@ xnoremap <silent> <leader>r :<C-U>call aconsola#Mandaraladerecha("0")<CR>
 nmap <silent> <leader>rr V<leader>r
 
 " xnoremap <buffer> <leader>R :w! temporal.R<cr><c-w>lisource("temporal.R",echo=TRUE) <cr>
+
+" Corregir true y false automáticamente a mayúsuclas porque así le gusta a R
+iab true TRUE
+iab True TRUE
+iab false FALSE
+iab False FALSE

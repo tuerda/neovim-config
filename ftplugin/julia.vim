@@ -21,3 +21,9 @@ nmap <silent> <leader>rr V<leader>r
 iab and &
 iab or \|
 iab not ~
+
+"Poner en minúsculas true y false porque así le gusta a julia.
+iab False false
+iab FALSE false
+iab True true
+iab TRUE true
