@@ -1,4 +1,4 @@
-function! Tabcomplete()
+function! tabcomplete#Complete()
     let linea=strpart(getline('.'),-1,col('.')) "linea actual hasta el cursor
     let palabra=matchstr(linea,"[^ \s]*$") "palabra actual
     if (match(palabra,'\/') != -1) "habrá alguna / por ahí?

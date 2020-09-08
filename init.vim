@@ -205,14 +205,10 @@ nnoremap <leader>b :ls<CR>:b<Space>
 "Modo sin distracciones
 nnoremap <leader>D :colorscheme concentracion <cr>
 
-"Tab para autocompletar. Esta función está en plugin/tabcomplete.vim
-inoremap <expr> <Tab> Tabcomplete()
+"Tab para autocompletar. Esta función está en autoload/tabcomplete.vim
+inoremap <expr> <Tab> tabcomplete#Complete()
 
-"En modo visual * y # buscan la selección actual en lugar de la palabra actual. Esta función está en plugin/vsetsearch.vim 
-xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
-xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
-
-"}}}
+"* y # en modo visual están en el archivo plugin/vsetsearch.vim
 
 "Comandos --------- {{{
 "Para dividir una oración por linea
@@ -220,41 +216,15 @@ command! -range Oraciones keeppatterns <line1>,<line2> s/\. /\./g
 "}}}
 
 "Para plugins --------- {{{
+
 "Los plugins se cargan solos de pack/plugins/start
 "Para agregar plugins opcionales de pack/plugins/opt, usar packadd
 
 "Ahora cargo surround, commentary, y los textobjs: user, between
 
-"Para archivos cifrados con gpg. Ligeramente modificado de algo copiado del internet. --------- {{{
-"Debo ver cómo pasar esto a un tipo de archivo.
+"""""""""""""""""""""""""""""""""""""""""""""
 
-" Don't save backups of *.gpg files
-set backupskip+=*.gpg
-
-augroup encrypted
-  au!
-  " Disable swap files, and set binary file format before reading the file
-  autocmd BufReadPre,FileReadPre *.gpg
-    \ setlocal noswapfile bin viminfo=
-  " Decrypt the contents after reading the file, reset binary file format
-  " and run any BufReadPost autocmds matching the file name without the .gpg
-  " extension
-  autocmd BufReadPost,FileReadPost *.gpg
-    \ execute "'[,']!gpg -q --decrypt --default-recipient-self" |
-    \ setlocal nobin |
-    \ execute "doautocmd BufReadPost " . expand("%:r")
-  " Set binary file format and encrypt the contents before writing the file
- autocmd BufWritePre,FileWritePre *.gpg
-    \ setlocal bin |
-    \ '[,']!gpg -c
-  " After writing the file, do an :undo to revert the encryption in the
-  " buffer, and reset binary file format
-  autocmd BufWritePost,FileWritePost *.gpg
-    \ silent u |
-    \ setlocal nobin
-augroup END
-
-"}}}
+"Para archivos gpg se carga en plugin/gpg.vim
 
 "Para netrw --------- {{{
 let g:netrw_banner = 0 "Mata el banner
