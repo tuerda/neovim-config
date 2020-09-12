@@ -37,7 +37,7 @@ set number
 set relativenumber
 " }}}
 
-"números absolutos en ventanas que no están activas: --------- {{{
+"números absolutos para ventanas que no están activas: --------- {{{
 augroup linenr
     autocmd!
     autocmd WinEnter * setlocal relativenumber
@@ -79,7 +79,7 @@ set magic
 "Ajustes gráficos --------- {{{
 set lazyredraw
 set title
-colorscheme nicotranssinneovim
+colorscheme nicotrans
 set scrolloff=3
 set display+=lastline
 set linebreak

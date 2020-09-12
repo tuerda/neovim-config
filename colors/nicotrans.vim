@@ -17,6 +17,7 @@ highlight Identifier     ctermfg=27                                   guifg=#005
 highlight LineNr         ctermfg=254     ctermbg=236                  guifg=#e4e4e4     guibg=#303030
 highlight MatchParen     ctermfg=16      ctermbg=31                   guifg=#000000     guibg=#0087af
 highlight Normal         ctermfg=231                                  guifg=#ffffff
+highlight NormalNC       ctermbg=233                                                    guibg=#121212
 highlight Pmenu          ctermbg=16      ctermfg=28                   guifg=#000000     guibg=#008700
 highlight PmenuSel       ctermbg=28      ctermfg=231                  guifg=#008700     guibg=#ffffff
 highlight PreProc        ctermfg=47                                   guifg=#00ff5f
@@ -36,8 +37,5 @@ augroup linea
     "Modo insertar
     autocmd InsertEnter * highlight CursorLine ctermbg=17
     autocmd InsertLeave * highlight CursorLine ctermbg=none
-    "modo terminal
-    autocmd TermEnter * highlight Normal ctermbg=234
-    autocmd TermLeave * highlight Normal ctermbg=none
 augroup END
 "}}}
