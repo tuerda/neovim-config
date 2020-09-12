@@ -1,4 +1,4 @@
-"Colores construidos a mano
+"Colores construidos a mano; NormalNC solo existe en neovim.
 hi clear
 set background=dark
 if exists("syntax_on")
