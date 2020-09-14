@@ -27,6 +27,9 @@ highlight spellbad       ctermfg=88      ctermbg=166                  guifg=#870
 highlight Statement      ctermfg=220                                  guifg=#ffd700
 highlight StatusLine     ctermfg=16      ctermbg=245 cterm=none       guifg=#000000     guibg=#8a8a8a
 highlight StatusLineNC   ctermfg=254     ctermbg=236 cterm=none       guifg=#e4e4e4     guibg=#303030
+highlight TabLine        ctermfg=254     ctermbg=236 cterm=none       guifg=#e4e4e4     guibg=#303030
+highlight TabLineSel     ctermfg=16      ctermbg=245 cterm=none       guifg=#000000     guibg=#8a8a8a
+highlight TabLineFill    ctermfg=236                                  guifg=#303030
 highlight Todo           ctermfg=92      ctermbg=45                   guifg=#8700d7     guibg=#00d7ff
 highlight Type           ctermfg=34                                   guifg=#00af00
 highlight Visual         ctermfg=16      ctermbg=247                  guifg=#000000     guibg=#9e9e9e
