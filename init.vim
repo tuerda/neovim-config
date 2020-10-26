@@ -212,7 +212,7 @@ inoremap <expr> <Tab> tabcomplete#Complete()
 
 "Comandos --------- {{{
 "Para dividir una oración por linea
-command! -range Oraciones keeppatterns <line1>,<line2> s/\. /\./g
+command! -range Oraciones keeppatterns <line1>,<line2> s/\. /\.\r/g
 "}}}
 
 "Para plugins --------- {{{

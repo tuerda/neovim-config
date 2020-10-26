@@ -18,3 +18,5 @@ This is a config for a heavily customized neovim setup. It includes:
 - Four plugins found in `pack/plugins/start` (which I just included in the repo because they are small)
 - Four custom color schemes (and a minor variation on one of them)
 - Miscelaneous keybindings, settings and configuration
+
+**Note that this readme is unmaintained and may be outdated, not fully describing the contents of the repository**
