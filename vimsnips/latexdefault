@@ -1,0 +1,24 @@
+\documentclass [11pt] {article}
+\usepackage [utf8] {inputenc}
+\usepackage {graphicx}
+\usepackage {amsfonts}
+\usepackage {amsthm}
+\usepackage {amsmath}
+\usepackage [autostyle, english=american]{csquotes}
+\MakeOuterQuote{"}
+\newcommand {\1}{1{\hskip -2.5 pt}\hbox{I}}
+
+%.____         ___________    ____  ___ 
+%|    |   _____\__    _______ \   \/  / 
+%|    |   \__  \ |    |_/ __ \ \     /  
+%|    |___ / __ \|    |\  ___/ /     \  
+%|_______ (____  |____| \___  /___/\  \ 
+%        \/    \/           \/      \_/ 
+                                       
+\title{}
+\date{}
+\begin{document}
+\maketitle{CAMBIAMEPLIS}
+
+\end{document}
+ggdd/CAMBIAMEPLISciw

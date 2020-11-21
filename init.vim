@@ -129,7 +129,7 @@ xnoremap <m-left> <Esc>`<<C-v>`>odhP`<<C-v>`>hoh
 "}}}
 
 "dmenu para algunos snippets y macros.
-nnoremap <leader>m :r !cat ~/.vimsnips/`ls ~/.vimsnips <bar> dmenu`<CR>0"pd$@p
+nnoremap <leader>m :r !cat ~/.config/nvim/vimsnips//`ls ~/.config/nvim/vimsnips <bar> dmenu`<CR>0"pd$@p
 
 "alt espacio para dar un espacio sin expandir una abreviación abreviación.
 inoremap <m-space> <c-v><space>
