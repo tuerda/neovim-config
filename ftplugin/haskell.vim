@@ -1,4 +1,6 @@
 command! Run :vsplit | terminal ghci
+compiler ghc
+setlocal makeprg=ghc\ --make\ %
 
 "mandar selección visual a la consola
 xnoremap <buffer> <leader>r :w! temporal.hs<cr><c-w>li:l temporal.hs<cr>

@@ -12,6 +12,7 @@ set hidden
 set noautoread
 set confirm
 set autochdir
+set clipboard=unnamedplus
 
 "Hacer que vim trate todos los números como decimales, tengan o no un cero en frente
 set nrformats-=octal
@@ -150,10 +151,6 @@ nnoremap <leader>t :!ctags -R<CR><CR>
 nnoremap <leader>ev :tabedit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-"para copiar al portapapeles de sistema (independientemente del teclado)
-nnoremap <leader>y "+y
-xnoremap <leader>y "+y
-
 "espacio u para poner en mayúscula todas las primeras letras de palabras en una linea o selección visual: --------- {{{
 "Tal vez esto se pueda convertir en un operador para mayor flexibilidad, pero habría que pensar como operar sobre lineas incompletas.
 xnoremap <leader>u :<c-u>keeppatterns s/\%V\<./\u&/g<CR>
@@ -214,6 +211,10 @@ inoremap <expr> <Tab> tabcomplete#Complete()
 "Para dividir una oración por linea
 command! -range Oraciones keeppatterns <line1>,<line2> s/\. /\.\r/g
 "}}}
+
+"Para hacer un diff con el archivo original
+command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+	 	\ | wincmd p | diffthis
 
 "Para plugins --------- {{{
 
