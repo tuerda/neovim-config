@@ -190,10 +190,10 @@ nnoremap <leader>h ^
 onoremap <leader>h ^
 nnoremap <leader>l $
 onoremap <leader>l $
-nnoremap <leader>k <c-u>
-onoremap <leader>k <c-u>
-nnoremap <leader>j <c-d>
-onoremap <leader>j <c-d>
+nnoremap <leader>k {
+onoremap <leader>k {
+nnoremap <leader>j }
+onoremap <leader>j }
 "}}}
 
 "Para saltar rápido entre buffers. Mapping robado de internet y modificado un poco.
@@ -213,7 +213,7 @@ command! -range Oraciones keeppatterns <line1>,<line2> s/\. /\.\r/g
 "}}}
 
 "Para hacer un diff con el archivo original
-command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+command! DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 
 "Para plugins --------- {{{
