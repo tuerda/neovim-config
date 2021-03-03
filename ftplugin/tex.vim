@@ -56,16 +56,16 @@ command! Control filetype indent off |
 "}}}
 
 "Abreviaturas --------- {{{
-iab lenumerate \begin{enumerate}<CR>\item{}<CR>\end{enumerate}<esc>k0f{a
-iab litemize \begin{itemize}<CR>\item{}<CR>\end{itemize}<esc>k0f{a
-iab lfigure \begin{figure}<CR>\begin{centering}<CR>\includegraphics{}<CR>\caption{}<CR>\label{}<CR>\end{centering}<CR>\end{figure}<esc>4k0f{a
-iab lframe \begin{frame}<CR>\frametitle{}<CR>\framesubtitle{}<CR>\end{frame}<esc>2k0f{a
-iab ldocument \begin{document}<CR>\end{document}<esc>ko
-iab labstract \begin{abstract}<CR>\end{abstract}<esc>ko
-iab ltabular \begin{tabular}{cc}<CR>&\\ <CR>\end{tabular}<esc>2k$T{i
-iab lproof \begin{proof}<CR>\end{proof}<esc>ko
-iab ltable \begin{table}<CR>\begin{tabular}{cc}<CR>\hline<CR>&\\ <CR>\hline<CR>\end{tabular}<CR>\caption{}<CR>\end{table}<esc>6k$T{i
-iab larray \begin{array}{}<CR>\end{array}<esc>k$T{i
-iab lcase \begin{case}<CR>\end{case}<esc>kA
-iab lcenter \begin{center}<CR>\end{center}<esc>O
+iab <buffer> lenumerate \begin{enumerate}<CR>\item{}<CR>\end{enumerate}<esc>k0f{a
+iab <buffer> litemize \begin{itemize}<CR>\item{}<CR>\end{itemize}<esc>k0f{a
+iab <buffer> lfigure \begin{figure}<CR>\begin{centering}<CR>\includegraphics{}<CR>\caption{}<CR>\label{}<CR>\end{centering}<CR>\end{figure}<esc>4k0f{a
+iab <buffer> lframe \begin{frame}<CR>\frametitle{}<CR>\framesubtitle{}<CR>\end{frame}<esc>2k0f{a
+iab <buffer> ldocument \begin{document}<CR>\end{document}<esc>ko
+iab <buffer> labstract \begin{abstract}<CR>\end{abstract}<esc>ko
+iab <buffer> ltabular \begin{tabular}{cc}<CR>&\\ <CR>\end{tabular}<esc>2k$T{i
+iab <buffer> lproof \begin{proof}<CR>\end{proof}<esc>ko
+iab <buffer> ltable \begin{table}<CR>\begin{tabular}{cc}<CR>\hline<CR>&\\ <CR>\hline<CR>\end{tabular}<CR>\caption{}<CR>\end{table}<esc>6k$T{i
+iab <buffer> larray \begin{array}{}<CR>\end{array}<esc>k$T{i
+iab <buffer> lcase \begin{case}<CR>\end{case}<esc>kA
+iab <buffer> lcenter \begin{center}<CR>\end{center}<esc>O
 "}}}

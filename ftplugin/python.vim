@@ -16,12 +16,12 @@ nnoremap <silent> <leader>r :set opfunc=aconsola#Mandaraladerecha<cr>g@
 xnoremap <silent> <leader>r :<C-U>call aconsola#Mandaraladerecha("0")<CR>
 nmap <silent> <leader>rr V<leader>r
 
-iab pyinit def __init__ (self):<cr>
+iab <buffer> pyinit def __init__ (self):<cr>
 
 " Poner en mayúsculas la primera letra de true y false porque así le gust a python.
-iab false False
-iab FALSE False
-iab true True
-iab TRUE True
+iab <buffer> false False
+iab <buffer> FALSE False
+iab <buffer> true True
+iab <buffer> TRUE True
 
 " xnoremap <buffer> <leader>R :w! temporal.py<cr><c-w>liexec(open("temporal.py").read()) <cr>

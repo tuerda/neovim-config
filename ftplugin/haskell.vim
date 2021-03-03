@@ -8,7 +8,7 @@ xnoremap <buffer> <leader>r :w! temporal.hs<cr><c-w>li:l temporal.hs<cr>
 nnoremap <buffer> <leader>r :w<cr><c-w>li:l <c-\><c-n>:put #<cr>i<cr>
 
 "Poner mayúsculas y minúsculas a True y False como le gusta a haskell
-iab false False
-iab FALSE False
-iab true True
-iab TRUE True
+iab <buffer> false False
+iab <buffer> FALSE False
+iab <buffer> true True
+iab <buffer> TRUE True

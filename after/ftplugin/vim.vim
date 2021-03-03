@@ -1,2 +1,2 @@
 "arreglar comentarios raros
-setlocal formatoptions -=croq
+setlocal formatoptions -=cro
