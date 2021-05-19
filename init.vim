@@ -123,10 +123,10 @@ nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 " Mover un bloque visual  --------- {{{
-xnoremap <m-down> :m '>+1<CR>gv=gv
-xnoremap <m-up> :m '<-2<CR>gv=gv
-xnoremap <m-right> <Esc>`<<C-v>`>odp`<<C-v>`>lol
-xnoremap <m-left> <Esc>`<<C-v>`>odhP`<<C-v>`>hoh
+xnoremap <silent> <m-down> :m '>+1<CR>gv=gv
+xnoremap <silent> <m-up> :m '<-2<CR>gv=gv
+xnoremap <silent> <m-right> <Esc>`<<C-v>`>odp`<<C-v>`>lol
+xnoremap <silent> <m-left> <Esc>`<<C-v>`>odhP`<<C-v>`>hoh
 "}}}
 
 "dmenu para algunos snippets y macros.
